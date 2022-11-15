@@ -23,7 +23,7 @@ const useFlightSearchForm = () => {
     }
 
     const handleChangePrice = (e: ChangeEvent<HTMLInputElement>) => {
-        const value = parseInt(e.target.value)
+        const value = parseFloat(e.target.value)
 
         if (isNaN(value)) {
             if (e.target.id === 'min') {

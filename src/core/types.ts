@@ -7,6 +7,7 @@ export interface FlightData {
 }
 
 export const places: Array<string> = [
+    '',
     'COR',
     'MDZ',
     'BRC',

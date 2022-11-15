@@ -33,6 +33,14 @@ const useFilterFlightList = ({
     }
 
     const checkRoute = (flight: FlightData) => {
+        if (origin === '' && destination === '') return true
+
+        if (origin === '' || destination === '') {
+            if (flight.origin === origin || flight.destination === destination) return true 
+
+            return false
+        }
+
         if (flight.origin === origin && flight.destination === destination) 
             return true
 
@@ -43,6 +51,8 @@ const useFilterFlightList = ({
         const fyear = flight.date.slice(0, 4)
         const fmonth = flight.date.slice(5, 7)
         const fday = flight.date.slice(8, 10)
+
+        if (fday === '' || fmonth === '' || fyear === '') return true
 
         if (fday === day && fmonth === month && fyear === year)
             return true
@@ -59,12 +69,10 @@ const useFilterFlightList = ({
                 return false
             }) 
 
-            console.log(nfilteredList)
-
             const npaginatedList = paginateList(nfilteredList)
 
             setFilteredList(nfilteredList)
-            setPaginatedList(npaginatedList)
+            setPaginatedList(npaginatedList.sort((a, b) => a.price - b.price))
             setNumberOfPages(Math.ceil(nfilteredList.length / factor))
             setCurrentPage(1)
         }
@@ -73,7 +81,7 @@ const useFilterFlightList = ({
     const paginateList = (list: FlightData[]) => {
         const nlist = [...list].splice(0, factor + 1)
 
-        return nlist
+        return nlist.sort((a, b) => a.price - b.price)
     }
 
     const goToPage = (page: number) => {
@@ -82,7 +90,7 @@ const useFilterFlightList = ({
 
         const npaginatedList = [...filteredList].slice(start, end)
 
-        setPaginatedList(npaginatedList)
+        setPaginatedList(npaginatedList.sort((a, b) => a.price - b.price))
         setCurrentPage(page)
     }
 
