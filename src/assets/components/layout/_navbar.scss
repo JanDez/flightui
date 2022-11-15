@@ -1,0 +1,30 @@
+.navbar-container {
+    display: flex;
+    position: relative;
+    height: 50px;
+    width: 100%;
+
+
+
+
+    .navbar {
+        display: flex;
+        position: fixed;
+        box-shadow: 0 0 10px rgba(31, 44, 150, 1);
+        border-bottom: 2px rgba(31, 44, 150, 1) solid;
+        height: 50px;
+        width: 100%;
+        background: white;
+
+
+
+
+        .navbar-content {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.form-field {
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+
+
+    .input-label{
+        width: 60%;
+    }
+
+    .input-text{
+        height: 25px;
+        width: 30%;
+        max-height: 25px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 4px;
+        border-radius: 4px;
+        border:none;
+
+    }
+    .input-text:focus{
+        outline: orange;
+    }
+}

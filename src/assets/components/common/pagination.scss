@@ -1,0 +1,34 @@
+.pagination {
+
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  gap: 0.6rem;
+
+  .pagination-item {
+
+    button {
+      width: 32px;
+      height: 32px;
+      color:orange;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    button:hover{
+      background: #181818;
+    }
+
+    .active-page {
+      border: 2px solid orange;
+      background: rgba(31, 44, 150, 1);
+      color: white;
+
+
+    }
+
+
+
+  }
+}

@@ -1,0 +1,39 @@
+.footer-container {
+  display: flex;
+  width: 100%;
+  background: rgba(31, 44, 150, 1);
+  color: white;
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    height: 140px;
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: center;
+      align-items: center;
+
+      .footer-logo-message {
+        display: flex;
+        align-items: center;
+      }
+      
+      .flightUI-text{
+        color:white;
+        margin-right: 5px;
+      }
+
+      .text{
+        display: flex;
+        align-items: center;
+        
+        .icon {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

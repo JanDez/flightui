@@ -1,0 +1,26 @@
+.flight-list-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 500px;
+
+    .flight-list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        width: 100%;
+
+        .flight-item {
+            display: flex;
+            padding: 10px;
+            border: 2px #1f2c96 solid;
+            box-shadow: 0 0 5px #1f2c96;
+            width: 100%;
+        }
+    }
+
+    .no-text {
+        color: #1f2c96;
+        font-weight: bolder;
+    }
+}

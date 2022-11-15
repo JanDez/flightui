@@ -1,0 +1,22 @@
+.flight-form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+
+  .flight-form {
+    display: flex;
+    flex-direction: column;
+    color:white;
+    font-weight: 500;
+    width: 300px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    row-gap: 0.4rem;
+    background:#0471A6 ;
+    padding: 1.2rem;
+    border-radius: 5px;
+    border: 2px #1f2c96 solid;
+    box-shadow: 0px 0px 10px #1f2c96;
+  }
+}

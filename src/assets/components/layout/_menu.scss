@@ -1,0 +1,14 @@
+.menu-container {
+    display: flex;
+    width: 100%;
+
+    .menu {
+        display: flex;
+        list-style: none;
+        width: 100%;
+
+        .menu-item {
+            padding: 5px;
+        }
+    }
+}
